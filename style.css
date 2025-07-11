@@ -1,0 +1,448 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background 0.4s, color 0.4s;
+  background: #fff;
+  color: #4a4a4a; /* Changed from #333 */
+}
+
+body.dark {
+  background: #0f0f0f;
+  color: #e6f5ff; /* Changed from #e0e0e0 */
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #2c3e50;
+  color: #f8f8f8; /* Changed from #fff */
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* SCROLL TO TOP */
+#topBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  font-size: 20px;
+  padding: 8px 14px;
+  background: #2c3e50;
+  color: #f0f8ff; /* Changed from white */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+body:hover #topBtn {
+  display: block;
+}
+
+/* FLOATING CART */
+.floating-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  font-size: 24px;
+  background: #f39c12;
+  color: #2d3436; /* Changed from white */
+  padding: 10px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1600585153881-6f9f6e79c90d?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  color: #f0f8ff; /* Changed from white */
+  text-align: center;
+  padding-top: 150px;
+}
+
+body.dark .hero {
+  background: url('https://images.unsplash.com/photo-1600585153881-6f9f6e79c90d?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  color: #e6f5ff; /* Changed from #f8f8f8 */
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #ffffff; /* Added specific color */
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  color: #f0f8ff; /* Added specific color */
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #ffffff;
+  color: #2d3436; /* Changed from #333 */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: #ddd;
+}
+
+/* SECTION */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ABOUT */
+#about p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  color: #555555; /* Added specific color */
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* PRODUCTS */
+.product-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  width: 250px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-front {
+  background: #fff;
+  color: #2d3436; /* Changed from #000 */
+}
+
+.card-front img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-front h3 {
+  padding: 15px;
+  color: #2c3e50; /* Added specific color */
+}
+
+.card-back {
+  background: #2c3e50;
+  color: #e6f5ff; /* Changed from #fff */
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back a {
+  color: #f0f8ff; /* Changed from #fff */
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+/* MORE OPTIONS */
+.more-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.more-box {
+  background: #f1f1f1;
+  padding: 30px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  color: #4a4a4a; /* Added specific color */
+}
+
+.more-box:hover {
+  transform: translateY(-5px);
+  background: #ffe9c5;
+}
+
+/* TESTIMONIALS */
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50; /* Added specific color */
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: #555555; /* Added specific color */
+}
+
+/* ORDER NOW */
+.order-now h2 {
+  margin-bottom: 20px;
+  color: #2c3e50; /* Added specific color */
+}
+
+.order-btn {
+  padding: 12px 30px;
+  background: #27ae60;
+  color: #f8f8f8; /* Changed from white */
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.order-btn:hover {
+  background: #1e8449;
+}
+
+/* NEWSLETTER POPUP */
+.popup {
+  position: fixed;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2000;
+  color: #4a4a4a; /* Added specific color */
+}
+
+.popup h3 {
+  margin-bottom: 15px;
+}
+
+.popup input {
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: #4a4a4a; /* Added specific color */
+}
+
+.popup button {
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: #f8f8f8; /* Changed from white */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FADE-IN EFFECT */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in:nth-of-type(1) { animation-delay: 0.3s; }
+.fade-in:nth-of-type(2) { animation-delay: 0.6s; }
+.fade-in:nth-of-type(3) { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #e6f5ff; /* Changed from #fff */
+  margin-top: 40px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .product-grid, .testimonial-slider, .more-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+body.dark .hero-btn {
+  background: #00b894;
+  color: #2d3436; /* Changed from #fff */
+}
+
+body.dark .card-front {
+  background: #1e1e1e;
+  color: #e6f5ff; /* Changed from #fff */
+}
+
+body.dark .card-back {
+  background: #00cec9;
+  color: #2d3436; /* Changed from #000 */
+}
+
+body.dark .more-box {
+  background: #2d3436;
+  color: #dfe6e9;
+}
+
+body.dark .more-box:hover {
+  background: #00b894;
+  color: #2d3436; /* Changed from #fff */
+  box-shadow: 0 0 15px #00b894;
+}
+
+body.dark .testimonial {
+  background: #2f2f2f;
+  color: #e6f5ff; /* Changed from #dfe6e9 */
+}
+
+body.dark .order-btn {
+  background: #0984e3;
+  color: #f8f8f8; /* Changed from #fff */
+}
+
+body.dark .popup {
+  background: #222;
+  color: #e6f5ff; /* Changed from #fff */
+}
+
+body.dark .popup input {
+  background: #333;
+  color: #e6f5ff; /* Changed from #fff */
+  border: 1px solid #444;
+}
+
+body.dark .popup button {
+  background: #00cec9;
+  color: #2d3436; /* Changed from #000 */
+}
+
+/* ===== HEADING COLORS ===== */
+
+/* Light Mode Heading Colors */
+.hero h1 {
+  color: #2c3e50; /* Dark blue-gray (originally white) */
+}
+
+.card-front h3 {
+  color: #e74c3c; /* Vibrant red (originally black) */
+}
+
+.testimonials h2 {
+  color: #27ae60; /* Green (originally default) */
+}
+
+.order-now h2 {
+  color: #9b59b6; /* Purple (originally default) */
+}
+
+.popup h3 {
+  color: #d35400; /* Dark orange (originally default) */
+}
+
+footer h2, footer h3, footer h4 {
+  color: #f1c40f; /* Yellow (originally white) */
+}
+
+/* Dark Mode Heading Colors */
+body.dark .hero h1 {
+  color: #00cec9; /* Teal (originally light gray) */
+}
+
+body.dark .card-front h3 {
+  color: #f39c12; /* Orange (originally white) */
+}
+
+body.dark .testimonials h2 {
+  color: #1abc9c; /* Light teal (originally default) */
+}
+
+body.dark .order-now h2 {
+  color: #e84393; /* Pink (originally default) */
+}
+
+body.dark .popup h3 {
+  color: #fdcb6e; /* Light yellow (originally default) */
+}
+
+body.dark footer h2,
+body.dark footer h3,
+body.dark footer h4 {
+  color: #00b894; /* Mint green (originally default) */
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FurniWorld - Modern Furniture</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</button>
+
+  <!-- Floating Cart -->
+  <a href="cart.html" class="floating-cart">🛒</a>
+
+  <!-- Scroll to Top -->
+  <button onclick="scrollToTop()" id="topBtn">🔼</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>FurniWorld</h1>
+    <p>Style Your Home with Elegance & Comfort</p>
+    <a href="#products" class="hero-btn">Explore Products</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Us</h2>
+    <p>We are a premium online furniture brand offering top-quality, handcrafted designs delivered right to your doorstep. Our mission is to combine beauty and comfort, tailored to your lifestyle.</p>
+    <a href="about.html" target="_blank" class="learn-more">Learn More →</a>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="fade-in">
+    <h2>Our Featured Products</h2>
+    <div class="product-grid">
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="C:\Users\shubh\OneDrive\Desktop\abc.jpg" alt="Sofa">
+            <h3>Classic Sofa</h3>
+          </div>
+          <div class="card-back">
+            <p>₹65,000</p>
+            <a href="product1.html" target="_blank">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="C:\Users\shubh\OneDrive\Desktop\bed.jpg" alt="Bed">
+            <h3>Wooden Bed</h3>
+          </div>
+          <div class="card-back">
+            <p>₹75,000</p>
+            <a href="product2.html" target="_blank">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="C:\Users\shubh\OneDrive\Desktop\table.jpg" alt="Dining Table">
+            <h3>Dining Set</h3>
+          </div>
+          <div class="card-back">
+            <p>₹58,000</p>
+            <a href="product3.html" target="_blank">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- More Options Section -->
+  <section id="more" class="fade-in">
+    <h2>More Categories</h2>
+    <div class="more-grid">
+      <div class="more-box">Office Chairs</div>
+      <div class="more-box">Bookshelves</div>
+      <div class="more-box">TV Units</div>
+      <div class="more-box">Shoe Racks</div>
+      <div class="more-box">Wardrobes</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials fade-in">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">"Best furniture I’ve ever bought!" – Aarti</div>
+      <div class="testimonial">"Elegant designs and fast delivery!" – Rajat</div>
+      <div class="testimonial">"My living room looks totally upgraded." – Shruti</div>
+    </div>
+  </section>
+
+  <!-- Order Now -->
+  <section class="order-now fade-in">
+    <h2>Ready to Place an Order?</h2>
+    <a href="order.html" class="order-btn">Order Now</a>
+  </section>
+
+  <!-- Newsletter Popup -->
+  <div id="newsletter-popup" class="popup">
+    <h3>Subscribe for Offers!</h3>
+    <input type="email" placeholder="Enter your email" />
+    <button onclick="closePopup()">Subscribe</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FurniWorld. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closePopup() {
+      document.getElementById('newsletter-popup').style.display = 'none';
+    }
+
+    setTimeout(() => {
+      document.getElementById('newsletter-popup').style.display = 'flex';
+    }, 4000);
+  </script>
+
+</body>
+</html>
